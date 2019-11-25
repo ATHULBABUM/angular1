@@ -1,0 +1,27 @@
+<div style="text-align:center">
+    <h1>
+      Welcome to {{ title }}
+    </h1>
+  
+    <div>Months:
+      <select>
+        <option *ngFor="let i of months">{{i}}</option>
+      </select>
+  
+      <!-- <ol>
+          <li *ngFor="let i of months">{{i}}</li>
+       </ol>
+  
+    </div> -->
+    <!-- <p *ngIf="isavailable">I am available </p> -->
+    <span *ngIf="isavailable;else condition1">condition valid</span>
+    <ng-template #condition1>condition is invalid</ng-template>
+  
+  
+    <p *ngIf="a<b;else condition2">{{b}} is greater</p>
+    <ng-template #condition2>{{a}} is greater</ng-template>
+    <input type="text" [(ngModel)]="name"> 
+    <p >{{name}}</p>
+    <button (click)="myClickFunction($event)">click me</button>
+  
+  </div>
