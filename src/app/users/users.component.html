@@ -1,0 +1,14 @@
+<div class="users">
+    <h2>Users</h2>
+
+    <p>
+      users area to show
+    </p>
+    
+    <button (click)="getUsers()">view users</button>
+    <ul *ngFor="let i of usersdata">
+      <li>{{i.name}}</li>
+      <li>{{i.email}}</li>
+    </ul>
+
+</div>
